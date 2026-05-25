@@ -1,7 +1,6 @@
 /* =========================================================================
    Feature Strip — faixa amarela com beneficios de compra
    ---------------------------------------------------------------------------
-   Regra de ouro: NUNCA 3 itens em uma linha + 1 sozinho embaixo.
    So tres layouts permitidos:
      - 1 coluna (mobile)        : items empilhados, divisor horizontal
      - 2 colunas (tablet/medio) : 2x2 em grid, divisores nas bordas internas

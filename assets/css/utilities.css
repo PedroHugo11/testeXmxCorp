@@ -108,7 +108,6 @@
     flex-shrink: 0;
     object-fit: contain;
 }
-<<<<<<< HEAD
 
 .title__highlight {
   background: linear-gradient(
@@ -121,5 +120,3 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-=======
->>>>>>> 9f08c7556218c73a33549e00baae7f1de1997996

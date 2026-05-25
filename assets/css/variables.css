@@ -1,9 +1,5 @@
 /* =========================================================================
    Design Tokens
-   ---------------------------------------------------------------------------
-   Tokens extraidos diretamente do Figma da GaraHerb e estendidos com um
-   sistema fluido (clamp) para escalar suavemente entre 320px e 1920px sem
-   "saltos" de media query.
    ========================================================================= */
 
 :root {

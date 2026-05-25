@@ -1,15 +1,5 @@
 /* =========================================================================
-   Section: Order Your Garaherb (Preco) — 3 pacotes
-   ---------------------------------------------------------------------------
-   Fidelidade ao Figma:
-   - Fundo claro (off-white)
-   - Titulo centralizado "Order Your" (preto) + "Garaherb" (laranja)
-   - 3 cards brancos com tab preta no topo (Starter / Best Seller / Standard)
-   - Best Seller: tab com gradient laranja->amarelo + scale + shadow
-   - Cada card: nome do kit, "X BOTTLE", "XX Day Supply", imagem do produto,
-     preco grande, lista de bullets verdes, BUY NOW amarelo arredondado,
-     icones de meios de pagamento, total tachado.
-   Layout responsivo via Bootstrap row/col + media queries de polimento.
+   Section: Order Your Garaherb (Preco) — 3 combos de oferta
    ========================================================================= */
 
 .section-order {

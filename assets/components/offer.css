@@ -1,0 +1,240 @@
+/* =========================================================================
+   Section: Offer (oferta final)
+   ========================================================================= */
+
+.section-offer {
+    background: var(--color-white);
+    color: var(--color-black-natural);
+    padding-block: 0;
+}
+
+/* ---- Header preto -------------------------------------------------- */
+.offer__header {
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: clamp(1.5rem, 1rem + 2vw, 2.75rem) var(--space-page-x);
+}
+
+.offer__header-title {
+    font-size: clamp(1.05rem, 0.9rem + 1vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin: 0 auto;
+    max-width: 1054px;
+    text-wrap: balance;
+}
+
+.offer__header-accent {
+    background: linear-gradient(90deg, var(--color-text-grad-end) 0%, #FF8A00 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* ---- Grid de cards (reusa .kit-card de order.css) ------------------- */
+.offer__kits {
+    padding-block: clamp(2rem, 1.5rem + 3vw, 4rem);
+    background: var(--color-white);
+}
+
+.offer__kits .container {
+    width: min(100%, var(--max-width-content));
+    padding-inline: var(--space-page-x);
+}
+
+/* ---- Reviews (estrelas com spacing maior) -------------------------- */
+.offer__reviews {
+    text-align: center;
+    padding-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+.offer__reviews-title {
+    font-size: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+    font-weight: 700;
+    color: var(--color-black-natural);
+    margin: 0 0 0.75rem;
+}
+
+.offer__reviews-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.offer__reviews-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(6px, 0.5rem + 0.2vw, 12px);
+    color: var(--color-primary);
+    font-size: clamp(1.25rem, 1rem + 0.7vw, 1.75rem);
+    line-height: 1;
+}
+
+.offer__reviews-score {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-black-natural);
+}
+
+.offer__reviews-count {
+    font-size: 0.95rem;
+    color: var(--color-gray-dark);
+    margin: 0;
+}
+
+.offer__reviews-count strong {
+    color: var(--color-primary);
+}
+
+/* ---- Strip de features (reusa SVGs feature-*.svg do design system) ---- */
+.offer__features {
+    background: var(--color-white);
+    padding-block: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+}
+
+.offer__features-list {
+    width: min(100%, var(--max-width-content));
+    margin-inline: auto;
+    padding-inline: var(--space-page-x);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .offer__features-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    .offer__features-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0;
+    }
+}
+
+.offer__feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-black-natural);
+}
+
+@media (min-width: 992px) {
+    .offer__feature {
+        border-right: 1px solid rgba(11, 11, 11, 0.12);
+    }
+    .offer__feature:last-child {
+        border-right: 0;
+    }
+}
+
+.offer__feature-icon {
+    width: clamp(36px, 2rem + 1vw, 48px);
+    height: auto;
+    flex-shrink: 0;
+}
+
+.offer__feature-icon--large {
+    width: clamp(40px, 2.2rem + 1.2vw, 56px);
+}
+
+/* ---- Card de garantia (compacto, tamanho igual aos kit-cards) -------- */
+.offer__guarantee {
+    padding-block: clamp(2rem, 1.5rem + 2vw, 3rem);
+    background: var(--color-white);
+}
+
+.offer__guarantee-card {
+    width: min(100% - 2 * var(--space-page-x), 820px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 0.5rem + 1.5vw, 1.5rem);
+    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-danger) 100%);
+    border-radius: 14px;
+    padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    align-items: center;
+    color: var(--color-white);
+}
+
+@media (min-width: 640px) {
+    .offer__guarantee-card {
+        grid-template-columns: auto 1fr;
+    }
+}
+
+/* Selo 60 DAYS — agora imagem PNG redonda baixada do Figma */
+.offer__seal-image {
+    width: clamp(110px, 20vw, 300px);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-inline: auto;
+    display: block;
+}
+
+.offer__guarantee-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.6rem;
+}
+
+@media (max-width: 639.98px) {
+    .offer__guarantee-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.offer__guarantee-title {
+    font-size: clamp(1.15rem, 0.95rem + 1vw, 1.625rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-white);
+    margin: 0;
+    text-wrap: balance;
+}
+
+.offer__guarantee-title-accent {
+    background: linear-gradient(90deg, var(--color-text-grad-end) 0%, #FF8A00 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.offer__guarantee-desc {
+    font-size: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin: 0;
+    max-width: 60ch;
+}
+
+.offer__guarantee-desc strong {
+    color: var(--color-white);
+}
+
+/* Botao do card de garantia — usa .btn-order mas com tamanho normal (nao --lg) */
+.offer__guarantee-content .btn-order {
+    margin-top: 0.5rem;
+    min-width: 220px;
+}
