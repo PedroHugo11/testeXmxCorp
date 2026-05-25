@@ -20,7 +20,7 @@
 }
 
 .section-faq__eyebrow {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.2em;
     color: var(--color-primary);
@@ -64,7 +64,7 @@
 }
 
 .faq-accordion .accordion-button {
-    font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.1rem);
+    font-size: clamp(0.95rem, 1.25rem + 0.3vw, 1.5rem);
     font-weight: 600;
     padding: 1.1rem 1.25rem;
     box-shadow: none !important;

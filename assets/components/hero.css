@@ -78,6 +78,10 @@
   mask-image: linear-gradient(53deg, transparent 0%, #000 50%, #000 100%);
 }
 
+.hero__content {
+  max-width: 540px;
+}
+
 #hero-title {
   font-size: var(--fs-hero-title);
 }
@@ -201,4 +205,23 @@
     width: min(45vw, 820px);
     right: clamp(-14rem, -14vw, -14rem);
   }
+}
+
+.hero__badge {
+  color: var(--color-text-muted);
+  font-size: var(--fs-hero-badge);
+  letter-spacing: 0.08em;
+}
+
+.hero__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--fs-hero-desc);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* lista de benefícios */
+
+.hero__content > ul.list-unstyled {
+  font-size: 1.125rem;
 }

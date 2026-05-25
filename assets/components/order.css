@@ -33,7 +33,7 @@
 }
 
 .section-order__subtitle {
-  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.05rem);
+  font-size: var(--fs-hero-desc);
   color: var(--color-gray-dark);
   margin: 0;
 }
@@ -64,7 +64,7 @@
 
 /* Tab preta no topo com nome do plano */
 .kit-card__tab {
-  background: var(--color-black-natural);
+  background: var(--color-black);
   color: var(--color-white);
   text-align: center;
   font-size: 0.95rem;
@@ -104,15 +104,15 @@
 }
 
 .kit-card__name {
-  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
   font-weight: 800;
   line-height: 1.1;
-  color: var(--color-black-natural);
+  color: var(--color-black);
   margin: 0;
 }
 
 .kit-card__supply {
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   color: var(--color-gray-dark);
   margin: 0.25rem 0 0;
 }
@@ -128,7 +128,7 @@
 
 /* Preco */
 .kit-card__price {
-  font-size: clamp(2.25rem, 1.5rem + 2vw, 3rem);
+  font-size: clamp(3rem, 1.5rem + 2vw, 4rem);
   font-weight: 800;
   line-height: 1;
   color: var(--color-black-natural);

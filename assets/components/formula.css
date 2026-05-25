@@ -59,7 +59,13 @@
 @media (max-width: 991.98px) {
   .formula-media__image {
     width: 100%;
+  }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .formula-media__image {
+    width: 190%;
+  }
 }
 
 /* ---- Conteudo (texto) ------------------------------------------------- */
@@ -96,7 +102,7 @@
 }
 
 .formula-content__title {
-  font-size: clamp(1.75rem, 1rem + 3vw, 2rem);
+  font-size: clamp(2rem, 1rem + 3vw, 2.25rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -122,7 +128,7 @@
 }
 
 .formula-content__lead {
-  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.1rem);
+  font-size: var(--fs-hero-desc);
   line-height: 1.6;
   color: var(--color-text-muted);
   margin: 0 0 1rem;

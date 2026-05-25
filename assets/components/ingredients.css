@@ -25,16 +25,12 @@
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  color: var(--color-black-natural);
+  color: var(--color-black);
   margin: 0 0 0.75rem;
 }
 
-.section-ingredients__title-accent {
-  color: #ff8a00;
-}
-
 .section-ingredients__subtitle {
-  font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+  font-size: var(--fs-hero-desc);
   line-height: 1.5;
   color: var(--color-gray-dark);
   margin: 0;
@@ -49,7 +45,7 @@
 /* ---- Card ------------------------------------------------------------ */
 .ingredient-card {
   position: relative;
-  background: var(--color-black-natural);
+  background: var(--color-black-light);
   color: var(--color-white);
   border-radius: 8px;
   padding: clamp(3.5rem, 3rem + 2vw, 4.5rem) 1.5rem 1.75rem;
@@ -74,13 +70,12 @@
   width: clamp(72px, 6vw + 2rem, 96px);
   aspect-ratio: 1;
   background: var(--color-white);
-  border: 3px solid var(--color-primary);
+  border: 2.82px solid #FFD901;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(247, 196, 23, 0.35);
 }
 
 .ingredient-card__icon img {
