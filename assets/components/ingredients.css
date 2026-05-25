@@ -1,0 +1,127 @@
+/* =========================================================================
+   Section: Every capsule of Garaherb contains (Ingredients)
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo branco
+   - Titulo centralizado "Every capsule of" (preto) + "Garaherb contains:"
+     (laranja). Subtitulo cinza centralizado.
+   - 6 cards pretos em grid 3x2 (desktop), 2x3 (tablet), 1x6 (mobile)
+   - Cada card: circulo amarelo (com foto do ingrediente) sobreposto no
+     topo, nome do ingrediente em branco, descricao em cinza claro.
+   - Botao ORDER NOW amarelo abaixo do grid.
+   ========================================================================= */
+
+.section-ingredients {
+  background: var(--color-white);
+  color: var(--color-black-natural);
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+.section-ingredients .container {
+  width: min(100%, var(--max-width-content));
+  padding-inline: var(--space-page-x);
+}
+
+/* ---- Header ---------------------------------------------------------- */
+.section-ingredients__header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(2.5rem, 1.5rem + 3vw, 4rem);
+}
+
+.section-ingredients__title {
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-black-natural);
+  margin: 0 0 0.75rem;
+}
+
+.section-ingredients__title-accent {
+  color: #ff8a00;
+}
+
+.section-ingredients__subtitle {
+  font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1rem);
+  line-height: 1.5;
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+
+/* ---- Grid (row Bootstrap; usamos g-* para gaps consistentes) -------- */
+.ingredients-grid {
+  /* margem extra no topo para acomodar o circulo overlap */
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.75rem);
+}
+
+/* ---- Card ------------------------------------------------------------ */
+.ingredient-card {
+  position: relative;
+  background: var(--color-black-natural);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: clamp(3.5rem, 3rem + 2vw, 4.5rem) 1.5rem 1.75rem;
+  text-align: center;
+  height: 100%;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.ingredient-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(11, 11, 11, 0.16);
+}
+
+/* Circulo amarelo com foto do ingrediente, sobreposto no topo */
+.ingredient-card__icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(72px, 6vw + 2rem, 96px);
+  aspect-ratio: 1;
+  background: var(--color-white);
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(247, 196, 23, 0.35);
+}
+
+.ingredient-card__icon-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Quando nao tiver foto, ficamos com o icone Bootstrap dentro */
+.ingredient-card__icon i {
+  font-size: 1.75rem;
+  color: var(--color-danger);
+}
+
+.ingredient-card__title {
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-white);
+  margin: 0 0 0.5rem;
+}
+
+.ingredient-card__desc {
+  font-size: clamp(0.8rem, 0.75rem + 0.2vw, 0.9rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ---- Botao ORDER NOW abaixo do grid ---------------------------------- */
+.section-ingredients__cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+/* CTA usa .btn-order (utilities.css) — sem regras locais necessarias. */

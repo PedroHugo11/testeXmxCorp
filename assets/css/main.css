@@ -1,0 +1,8 @@
+/* =========================================================================
+   main.css — ponto de bundling.
+   ---------------------------------------------------------------------------
+   Em produção o ideal é concatenar/minificar todos os arquivos CSS via build
+   step. No HTML usamos múltiplos <link> em ordem para evitar @import (que
+   bloqueia render). Este arquivo fica vazio propositalmente — overrides
+   page-level entrariam aqui se necessário.
+   ========================================================================= */

@@ -1,0 +1,115 @@
+.text-highlight {
+    color: var(--color-highlight-orange);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 65px;
+    padding: 0 32px;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.button--primary {
+    width: 396px;
+    border: 0;
+    border-bottom: 6px solid var(--color-btn-stroke);
+    background: linear-gradient(180deg, var(--color-btn-grad-start) 0%, var(--color-btn-grad-end) 100%);
+    color: var(--color-btn-text);
+}
+
+.button--primary:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.04);
+}
+
+.button--primary:active {
+    transform: translateY(0);
+}
+
+.button__icon {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    object-fit: contain;
+}
+
+@media (max-width: 620px) {
+    .button {
+        width: 100%;
+        min-height: 58px;
+        padding-inline: 24px;
+        font-size: 20px;
+    }
+}
+/* ---- Botao Order Now reutilizavel ---------------------------------------
+   Usar em qualquer secao que tenha CTA principal amarelo "ORDER NOW".
+   Reusa o token de cor do botao do hero. Aceita modificador --lg pra tamanho
+   maior. Markup esperado:
+     <a class="btn-order js-cta" href="..." data-event="initiate_checkout">
+       <img class="btn-order__icon" src="assets/images/cart.webp" alt="" aria-hidden="true">
+       Order Now
+     </a>
+   ------------------------------------------------------------------------- */
+.btn-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-width: 280px;
+    min-height: 56px;
+    padding: 0 1.75rem;
+    background: linear-gradient(180deg, var(--color-btn-grad-start) 0%, var(--color-btn-grad-end) 100%);
+    color: var(--color-btn-text);
+    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.25rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom: 4px solid var(--color-btn-stroke);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform var(--transition-fast), filter var(--transition-fast);
+    touch-action: manipulation;
+}
+
+.btn-order:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+.btn-order:active,
+.btn-order.is-pressed {
+    transform: translateY(1px);
+    border-bottom-width: 2px;
+}
+
+/* Variante grande (usado em formula, ingredients, beneficios, etc.) */
+.btn-order--lg {
+    min-height: 60px;
+    border-bottom-width: 5px;
+    padding: 0 2rem;
+}
+
+.btn-order--lg:active,
+.btn-order--lg.is-pressed {
+    border-bottom-width: 3px;
+}
+
+.btn-order__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    object-fit: contain;
+}

@@ -1,0 +1,151 @@
+/* =========================================================================
+   Section: Benefits — "The only doctor-approved formula..."
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo preto com leve grid/raio decorativo
+   - Esquerda: bottle em destaque
+   - Direita: badge LIMITED TIME OFFER, headline em 2 linhas (white +
+     gradient yellow->red), lista de 5 checks verdes (Bootstrap icons),
+     botao ORDER NOW (.btn-order .btn-order--lg).
+   - Mobile: empilha bottle no topo, texto embaixo.
+   ========================================================================= */
+
+.section-benefits {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-block: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+/* grid decorativo sutil no fundo */
+.section-benefits::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-benefits .container {
+    position: relative;
+    z-index: 1;
+    width: min(100%, var(--max-width-content));
+    padding-inline: var(--space-page-x);
+}
+
+/* ---- Bottle ---------------------------------------------------------- */
+.benefits-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: clamp(280px, 28vw, 420px);
+}
+
+.benefits-media__image {
+    width: 100%;
+    max-width: clamp(220px, 25vw, 360px);
+    height: auto;
+    filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.6));
+}
+
+/* ---- Conteudo ---------------------------------------------------------- */
+.benefits-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-block: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .benefits-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.benefits-content__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.benefits-content__badge-icon {
+    width: 1rem;
+    height: auto;
+}
+
+.benefits-content__title {
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+    color: var(--color-white);
+    text-wrap: balance;
+}
+
+.benefits-content__title-accent {
+    background: linear-gradient(90deg, var(--color-text-grad-end) 0%, #FF8A00 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Lista de bullets */
+.benefits-content__list {
+    list-style: none;
+    margin: 0 0 1.75rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 460px;
+}
+
+@media (max-width: 991.98px) {
+    .benefits-content__list {
+        margin-inline: auto;
+    }
+}
+
+.benefits-content__item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+    font-weight: 500;
+    color: var(--color-white);
+    text-align: left;
+}
+
+.benefits-content__item i {
+    color: var(--color-green);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.benefits-content__cta-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 991.98px) {
+    .benefits-content__cta-wrapper {
+        justify-content: center;
+    }
+}

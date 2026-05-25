@@ -1,0 +1,111 @@
+/* =========================================================================
+   Section: FAQ — Frequently Asked Questions
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo preto
+   - Eyebrow "FAQ" amarela
+   - Titulo "Frequently Asked Questions" branco
+   - 5 items de accordion brancos (Bootstrap collapse)
+   - Botao ORDER NOW (.btn-order .btn-order--lg)
+   - Imagem "Supplement Facts" abaixo
+   ========================================================================= */
+
+.section-faq {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-block: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+.section-faq .container {
+    width: min(100%, var(--max-width-content));
+    padding-inline: var(--space-page-x);
+    max-width: 934px;
+}
+
+.section-faq__header {
+    text-align: center;
+    margin-bottom: clamp(2rem, 1.5rem + 1.5vw, 2.5rem);
+}
+
+.section-faq__eyebrow {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.section-faq__title {
+    font-size: clamp(1.75rem, 1rem + 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* ---- Accordion (override do Bootstrap) ------------------------------ */
+.faq-accordion {
+    --bs-accordion-bg: var(--color-white);
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-border-radius: 12px;
+    --bs-accordion-inner-border-radius: 12px;
+    --bs-accordion-color: var(--color-black-natural);
+    --bs-accordion-active-color: var(--color-black-natural);
+    --bs-accordion-active-bg: var(--color-white);
+    --bs-accordion-btn-color: var(--color-black-natural);
+    --bs-accordion-btn-bg: var(--color-white);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 3px var(--color-primary);
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230B0B0B'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230B0B0B'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-accordion .accordion-item {
+    border: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.faq-accordion .accordion-button {
+    font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.1rem);
+    font-weight: 600;
+    padding: 1.1rem 1.25rem;
+    box-shadow: none !important;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    border-bottom: 1px solid rgba(11, 11, 11, 0.06);
+}
+
+.faq-accordion .accordion-body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray-dark);
+    padding: 1rem 1.25rem 1.25rem;
+}
+
+/* ---- CTA ---------------------------------------------------------- */
+.section-faq__cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+
+/* ---- Supplement Facts image --------------------------------------- */
+.section-faq__supplement {
+    margin-top: clamp(2rem, 1.5rem + 2vw, 3rem);
+    text-align: center;
+}
+
+.section-faq__supplement-image {
+    width: 100%;
+    max-width: 1054px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
