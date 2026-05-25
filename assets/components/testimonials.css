@@ -1,13 +1,5 @@
 /* =========================================================================
    Section: Testimonials — "Over 150,000 Men Reported Better..."
-   ---------------------------------------------------------------------------
-   Fidelidade ao Figma:
-   - Fundo branco
-   - Titulo centralizado, "150,000" em amarelo (.testimonials__title-accent)
-   - 4 cards com foto da pessoa segurando o produto, quote em italico,
-     nome bold, idade em cinza.
-   - Mobile: 1 col / Tablet: 2 cols / Desktop: 4 cols (Bootstrap)
-   - Botao ORDER NOW (.btn-order .btn-order--lg) centralizado abaixo.
    ========================================================================= */
 
 .testimonials-section {
