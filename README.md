@@ -26,10 +26,9 @@ no teste:
 7. [SEO](#seo)
 8. [Performance](#performance)
 9. [Camada de tracking (GTM / Pixel / GA4)](#camada-de-tracking-gtm--pixel--ga4)
-10. [Imagens do Figma — checklist](#imagens-do-figma--checklist)
-11. [Como rodar localmente](#como-rodar-localmente)
-12. [Deploy](#deploy)
-13. [Convenções de código](#convenções-de-código)
+10. [Como rodar localmente](#como-rodar-localmente)
+11. [Deploy](#deploy)
+12. [Convenções de código](#convenções-de-código)
 
 ---
 
