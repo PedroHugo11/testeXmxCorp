@@ -1,3 +1,7 @@
+# Vídeo
+
+https://drive.google.com/drive/folders/1Cn0n6cTwlRSVY9_ay8gZnhOQSrIQDe71?usp=sharing
+
 # GaraHerb Landing — XMX Corp Frontend Test
 
 Landing page estática (HTML / CSS / JavaScript + Bootstrap 5) construída como
