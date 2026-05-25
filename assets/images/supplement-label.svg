@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1054 380" fill="none" aria-hidden="true">
+  <rect width="1054" height="380" rx="8" fill="#0E0D11"/>
+  <!-- Coluna esquerda: Suggested Use -->
+  <g fill="#FFFFFF" font-family="Inter, Arial, sans-serif">
+    <text x="30" y="50" font-size="13" font-weight="700">Suggested Use:</text>
+    <text x="30" y="70" font-size="11" fill="rgba(255,255,255,0.7)">As a dietary supplement, take one</text>
+    <text x="30" y="84" font-size="11" fill="rgba(255,255,255,0.7)">(1) capsule daily.</text>
+    <text x="30" y="118" font-size="13" font-weight="700">CAUTION/WARNING:</text>
+    <text x="30" y="138" font-size="11" fill="rgba(255,255,255,0.7)">Do not exceed recommended dose.</text>
+    <text x="30" y="172" font-size="13" font-weight="700">Storage:</text>
+    <text x="30" y="192" font-size="11" fill="rgba(255,255,255,0.7)">Store this product in a cool dry place below 30°C.</text>
+    <text x="30" y="240" font-size="11" fill="rgba(255,255,255,0.5)" font-style="italic">*Placeholder — replace with the real Supplement Facts</text>
+    <text x="30" y="256" font-size="11" fill="rgba(255,255,255,0.5)" font-style="italic">label from Figma at /assets/images/supplement-label.png</text>
+  </g>
+  <!-- Centro: bottle iconico -->
+  <g transform="translate(420 80)">
+    <rect x="60" y="0" width="100" height="220" rx="14" fill="#0B0B0B" stroke="#F7C417" stroke-width="2"/>
+    <path d="M85 50 L120 50 L100 100 L130 100 L90 170 L110 110 L80 110 Z" fill="#F7C417"/>
+    <text x="110" y="200" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#F7C417" text-anchor="middle">GaraHerb</text>
+  </g>
+  <!-- Direita: Supplement Facts box -->
+  <g transform="translate(750 30)">
+    <rect width="270" height="320" fill="#FFFFFF" rx="4"/>
+    <text x="135" y="28" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="900" fill="#0E0D11" text-anchor="middle">Supplement Facts</text>
+    <line x1="14" y1="40" x2="256" y2="40" stroke="#0E0D11" stroke-width="2"/>
+    <text x="14" y="60" font-family="Inter, Arial, sans-serif" font-size="11" fill="#0E0D11">Serving Size: 1 Capsule</text>
+    <text x="14" y="78" font-family="Inter, Arial, sans-serif" font-size="11" fill="#0E0D11">Servings Per Container: 30</text>
+    <line x1="14" y1="92" x2="256" y2="92" stroke="#0E0D11" stroke-width="1"/>
+    <text x="14" y="112" font-family="Inter, Arial, sans-serif" font-size="11" fill="#0E0D11">Vitamin B3 (as Niacin) 20 mg</text>
+    <text x="14" y="130" font-family="Inter, Arial, sans-serif" font-size="11" fill="#0E0D11">Zinc (as Zinc Oxide) 14 mg</text>
+    <line x1="14" y1="144" x2="256" y2="144" stroke="#0E0D11" stroke-width="1"/>
+    <text x="14" y="164" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" fill="#0E0D11">Proprietary Blend  570 mg</text>
+    <text x="14" y="184" font-family="Inter, Arial, sans-serif" font-size="9" fill="#0E0D11">L-Citrulline, L-Carnitine, Pine, Velvet</text>
+    <text x="14" y="196" font-family="Inter, Arial, sans-serif" font-size="9" fill="#0E0D11">Bean, Maca, Grape, Saffron Extract</text>
+  </g>
+</svg>

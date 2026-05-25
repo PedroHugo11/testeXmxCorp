@@ -1,0 +1,95 @@
+/* =========================================================================
+   Feature Strip — faixa amarela com beneficios de compra
+   ---------------------------------------------------------------------------
+   Regra de ouro: NUNCA 3 itens em uma linha + 1 sozinho embaixo.
+   So tres layouts permitidos:
+     - 1 coluna (mobile)        : items empilhados, divisor horizontal
+     - 2 colunas (tablet/medio) : 2x2 em grid, divisores nas bordas internas
+     - 4 colunas (desktop)      : tudo em uma linha, divisores verticais
+   ========================================================================= */
+
+.feature-strip {
+  position: relative;
+  z-index: var(--z-strip);
+  background: var(--color-primary);
+  color: var(--color-black-natural);
+}
+
+.feature-strip__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  gap: 0;
+  width: min(100%, var(--max-width-content));
+  margin-inline: auto;
+  padding: var(--space-strip-y) var(--space-page-x);
+}
+
+.feature-strip__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(10px, 0.6rem + 0.5vw, 16px);
+  min-height: 44px;
+  padding: clamp(8px, 0.5rem + 0.3vw, 12px) clamp(12px, 0.75rem + 0.5vw, 24px);
+  font-size: var(--fs-strip);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  border-bottom: 1px solid rgba(14, 13, 17, 0.16);
+}
+
+.feature-strip__item:last-child {
+  border-bottom: 0;
+}
+
+.feature-strip__icon {
+  width: clamp(36px, 2rem + 1vw, 48px);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.feature-strip__icon--large {
+  width: clamp(40px, 2.2rem + 1.2vw, 56px);
+}
+
+/* ---- 2 colunas (entre 540px e 1023.98px) -------------------------------- */
+@media (min-width: 540px) and (max-width: 1023.98px) {
+  .feature-strip__container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-strip__item {
+    justify-content: center;
+    border-bottom: 0;
+  }
+
+  /* Itens 1 e 2 = linha de cima, ganham divisor inferior */
+  .feature-strip__item:nth-child(1),
+  .feature-strip__item:nth-child(2) {
+    border-bottom: 1px solid rgba(14, 13, 17, 0.16);
+  }
+
+  /* Itens 1 e 3 = coluna da esquerda, ganham divisor a direita */
+  .feature-strip__item:nth-child(1),
+  .feature-strip__item:nth-child(3) {
+    border-right: 1px solid rgba(14, 13, 17, 0.24);
+  }
+}
+
+/* ---- 4 colunas (>= 1024px) ---------------------------------------------- */
+@media (min-width: 1024px) {
+  .feature-strip__container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .feature-strip__item {
+    justify-content: center;
+    border-bottom: 0;
+    border-right: 1px solid rgba(14, 13, 17, 0.24);
+  }
+
+  .feature-strip__item:last-child {
+    border-right: 0;
+  }
+}

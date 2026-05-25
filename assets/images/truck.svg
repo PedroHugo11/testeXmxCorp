@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none" aria-hidden="true">
+  <!-- Linhas de velocidade -->
+  <path d="M2 18 L18 18" stroke="#0E0D11" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M6 32 L22 32" stroke="#0E0D11" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M2 46 L18 46" stroke="#0E0D11" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Carroceria principal -->
+  <rect x="22" y="14" width="46" height="34" rx="3" fill="#0E0D11"/>
+  <!-- Cabine -->
+  <path d="M68 24 L78 24 L88 34 L88 48 L68 48 Z" fill="#0E0D11"/>
+  <!-- Janela da cabine -->
+  <path d="M72 28 L78 28 L84 34 L72 34 Z" fill="#F7C417"/>
+  <!-- Rodas -->
+  <circle cx="34" cy="52" r="7" fill="#0E0D11"/>
+  <circle cx="34" cy="52" r="3" fill="#F7C417"/>
+  <circle cx="74" cy="52" r="7" fill="#0E0D11"/>
+  <circle cx="74" cy="52" r="3" fill="#F7C417"/>
+</svg>

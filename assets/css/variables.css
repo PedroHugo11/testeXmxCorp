@@ -1,0 +1,91 @@
+/* =========================================================================
+   Design Tokens
+   ---------------------------------------------------------------------------
+   Tokens extraidos diretamente do Figma da GaraHerb e estendidos com um
+   sistema fluido (clamp) para escalar suavemente entre 320px e 1920px sem
+   "saltos" de media query.
+   ========================================================================= */
+
+:root {
+  /* ---- Cores base (Figma) ------------------------------------------------ */
+  --color-black: #0B0B0B;
+  --color-black-light: #1A1A1A;
+  --color-black-natural: #0E0D11;
+  --color-white: #FFFFFF;
+  --color-gray: #C9C9C9;
+  --color-gray-dark: #606060;
+  --color-gray-light: #5E7885;
+  --color-text-muted: rgba(255, 255, 255, 0.8);
+
+  /* ---- Marca ------------------------------------------------------------- */
+  --color-primary: #F7C417;
+  --color-primary-dark: #014A71;
+  --color-green: #04AC48;
+  --color-danger: #AA2315;
+
+  /* ---- Gradiente do hero (background) ------------------------------------ */
+  --color-bg-start: var(--color-black);
+  --color-bg-mid: var(--color-black-light);
+  --color-bg-end: var(--color-danger);
+
+  /* ---- Botao CTA --------------------------------------------------------- */
+  --color-btn-grad-start: #FFFE4A;
+  --color-btn-grad-end: #FFD901;
+  --color-btn-stroke: #8E7C02;
+  --color-btn-text: var(--color-black-natural);
+
+  /* ---- Gradiente de texto (titulo destaque) ------------------------------ */
+  --color-text-grad-start: #FF4747;
+  --color-text-grad-end: #F6E323;
+
+  /* ---- Tipografia -------------------------------------------------------- */
+  --font-primary: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Escalas fluidas (clamp(min, preferida, max)).
+     Vai do "minimo" em 320px ao "maximo" em 1440px,
+     escalando linearmente conforme o viewport cresce. */
+
+  /* Hero */
+  --fs-hero-title:   clamp(1.75rem, 0.6rem + 5.5vw, 2.5rem);        /* 28 -> 40px */
+  --fs-hero-desc:    clamp(0.9375rem, 0.78rem + 0.78vw, 1.25rem);   /* 15 -> 20px */
+  --fs-hero-badge:   clamp(0.75rem, 0.69rem + 0.31vw, 1rem);        /* 12 -> 16px */
+  --fs-hero-benefit: clamp(0.9375rem, 0.85rem + 0.47vw, 1.125rem);  /* 15 -> 18px */
+
+  /* Botao / Strip */
+  --fs-cta:    clamp(1rem, 0.85rem + 0.78vw, 1.5rem);               /* 16 -> 24px */
+  --fs-strip:  clamp(0.9375rem, 0.78rem + 0.78vw, 1.25rem);         /* 15 -> 20px */
+
+  /* ---- Espacamentos fluidos --------------------------------------------- */
+  --space-page-x:  clamp(1rem, 0.25rem + 3.75vw, 4rem);             /* 16 -> 64px */
+  --space-hero-y:  clamp(2.5rem, 1.5rem + 5vw, 6.5rem);             /* 40 -> 104px */
+  --space-strip-y: clamp(1rem, 0.7rem + 1.5vw, 1.5rem);             /* 16 -> 24px */
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --max-width-content: 1218px;
+  --max-width-page: 1920px;
+  --radius-pill: 999px;
+  --radius-card: 16px;
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --transition-smooth: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---- Sombras ----------------------------------------------------------- */
+  --shadow-product: 0 24px 42px rgba(0, 0, 0, 0.45);
+  --shadow-cta-hover: 0 12px 24px rgba(255, 217, 1, 0.35);
+
+  /* ---- Camadas (z-index) ------------------------------------------------- */
+  --z-hero-bg: 0;
+  --z-hero-content: 2;
+  --z-hero-media: 3;
+  --z-strip: 4;
+  --z-skip-link: 9999;
+}
+
+/* ---- Preferencias do usuario ------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-smooth: 0ms;
+    --transition-fast: 0ms;
+  }
+}

@@ -1,0 +1,64 @@
+/* =========================================================================
+   Section: Shipping — faixa amarela "Every 6 Bottle Order Gets FREE Shipping"
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo amarelo primary
+   - Caminhao SVG preto/amarelo a esquerda (assets/images/truck.svg)
+   - Texto: titulo bold + subtitulo pequeno
+   ========================================================================= */
+
+.shipping-banner {
+  background: #f4c400;
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.shipping-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.shipping-banner__icon {
+  width: clamp(90px, 10vw, 140px);
+  height: auto;
+}
+
+.shipping-banner__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.shipping-banner__title {
+  color: #111;
+  font-size: clamp(1.4rem, 3vw, 3rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.shipping-banner__title span {
+  color: #4f5563;
+}
+
+.shipping-banner__subtitle {
+  margin: 0;
+  color: #111;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 500;
+}
+
+/* =========================================================================
+   DESKTOP
+   ========================================================================= */
+
+@media (min-width: 768px) {
+  .shipping-banner__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}

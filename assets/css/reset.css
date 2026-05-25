@@ -1,0 +1,74 @@
+/* =========================================================================
+   Modern CSS Reset — minimo, sem dependencias, focado em performance.
+   ========================================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-primary) !important;
+  background-color: var(--color-bg-start);
+  color: var(--color-white);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100svh;
+  line-height: 1.5;
+  overflow-x: clip;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0rem !important;
+  margin-bottom: 0 !important;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Respeita usuarios que desligam animacao no SO */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

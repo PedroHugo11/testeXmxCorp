@@ -1,0 +1,112 @@
+/* =========================================================================
+   Section: Site Footer (barra-rodape + Footer)
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - barra-rodape (1:35): faixa AMARELA com links legais (texto preto)
+   - Footer top (1:29 parte preta): bloco PRETO com disclaimer FDA
+   - Footer bottom (1:29 parte branca): bloco BRANCO com copyright + endereco
+
+   Estrutura semantica:
+   <footer role="contentinfo">
+     <nav aria-label="Legal links">...7 links amarelos...</nav>
+     <div class="disclaimer-bar">FDA disclaimer (preto)</div>
+     <div class="copyright-bar">copyright + endereco (branco)</div>
+   </footer>
+   ========================================================================= */
+
+.site-footer {
+    background: var(--color-white);
+    color: var(--color-black-natural);
+}
+
+/* ---- 1. Barra de links AMARELA (barra-rodape 1:35) ----------------- */
+.site-footer__links-bar {
+    background: var(--color-primary);
+    color: var(--color-black-natural);
+}
+
+.site-footer__links-list {
+    width: min(100%, var(--max-width-content));
+    margin: 0 auto;
+    padding: clamp(0.875rem, 0.5rem + 1vw, 1.25rem) var(--space-page-x);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 0.5rem + 0.8vw, 2rem);
+    list-style: none;
+}
+
+.site-footer__link {
+    color: var(--color-black-natural);
+    font-size: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity var(--transition-fast);
+    /* touch target >= 44px (WCAG 2.5.5) */
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.25rem;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+    opacity: 0.7;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ---- 2. Disclaimer FDA — fundo PRETO ------------------------------- */
+.site-footer__disclaimer-bar {
+    background: var(--color-black);
+    color: var(--color-text-muted);
+    padding-block: clamp(1.25rem, 1rem + 1vw, 2rem);
+}
+
+.site-footer__disclaimer {
+    width: min(100%, 980px);
+    margin-inline: auto;
+    padding-inline: var(--space-page-x);
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    margin-block: 0;
+    text-wrap: pretty;
+}
+
+/* ---- 3. Copyright + endereco — fundo BRANCO ------------------------ */
+.site-footer__copyright-bar {
+    background: var(--color-white);
+    color: var(--color-black-natural);
+    padding-block: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+}
+
+.site-footer__copyright-container {
+    width: min(100%, var(--max-width-content));
+    margin-inline: auto;
+    padding-inline: var(--space-page-x);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    text-align: center;
+}
+
+.site-footer__copy,
+.site-footer__address {
+    font-size: clamp(0.8rem, 0.75rem + 0.2vw, 0.95rem);
+    line-height: 1.5;
+    margin: 0;
+    color: var(--color-black-natural);
+}
+
+.site-footer__copy {
+    font-weight: 600;
+}
+
+.site-footer__address {
+    color: var(--color-gray-dark);
+    font-weight: 400;
+}

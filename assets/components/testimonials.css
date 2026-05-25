@@ -1,0 +1,117 @@
+/* =========================================================================
+   Section: Testimonials — "Over 150,000 Men Reported Better..."
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo branco
+   - Titulo centralizado, "150,000" em amarelo (.testimonials__title-accent)
+   - 4 cards com foto da pessoa segurando o produto, quote em italico,
+     nome bold, idade em cinza.
+   - Mobile: 1 col / Tablet: 2 cols / Desktop: 4 cols (Bootstrap)
+   - Botao ORDER NOW (.btn-order .btn-order--lg) centralizado abaixo.
+   ========================================================================= */
+
+.testimonials-section {
+  padding-block: clamp(4rem, 8vw, 6rem);
+
+  background: #fff;
+}
+
+.testimonials-section__header {
+  max-width: 900px;
+
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+
+  text-align: center;
+}
+
+.testimonials-section__title {
+  color: var(--color-black);
+  font-size: 40px;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+}
+/* =========================================================================
+   CARD
+   ========================================================================= */
+
+.testimonial-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card__image {
+  width: 100%;
+
+  aspect-ratio: 4 / 6;
+
+  object-fit: cover;
+}
+
+.testimonial-card__body {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.testimonial-card__quote {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  color: #666;
+
+  font-size: clamp(0.95rem, 1vw, 1rem);
+
+  line-height: 1.5;
+
+  font-style: italic;
+}
+
+.testimonial-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.testimonial-card__name {
+  color: #0b0b0b;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+.testimonial-card__age {
+  color: #777;
+
+  font-size: 0.9rem;
+}
+
+/* =========================================================================
+   CTA
+   ========================================================================= */
+
+.testimonials-section__cta {
+  display: flex;
+  justify-content: center;
+
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}

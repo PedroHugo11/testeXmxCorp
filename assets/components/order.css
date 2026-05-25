@@ -1,0 +1,271 @@
+/* =========================================================================
+   Section: Order Your Garaherb (Preco) — 3 pacotes
+   ---------------------------------------------------------------------------
+   Fidelidade ao Figma:
+   - Fundo claro (off-white)
+   - Titulo centralizado "Order Your" (preto) + "Garaherb" (laranja)
+   - 3 cards brancos com tab preta no topo (Starter / Best Seller / Standard)
+   - Best Seller: tab com gradient laranja->amarelo + scale + shadow
+   - Cada card: nome do kit, "X BOTTLE", "XX Day Supply", imagem do produto,
+     preco grande, lista de bullets verdes, BUY NOW amarelo arredondado,
+     icones de meios de pagamento, total tachado.
+   Layout responsivo via Bootstrap row/col + media queries de polimento.
+   ========================================================================= */
+
+.section-order {
+  background: #f5f5f5;
+  color: var(--color-black-natural);
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+}
+
+.section-order__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  padding-inline: var(--space-page-x);
+}
+
+.section-order__title {
+  font-size: clamp(1.75rem, 1rem + 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-black-natural);
+  margin: 0 0 0.5rem;
+}
+
+.section-order__title-accent {
+      background: linear-gradient(90deg, var(--color-text-grad-start) 0%, var(--color-text-grad-end) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.section-order__subtitle {
+  font-size: clamp(0.95rem, 0.85rem + 0.4vw, 1.05rem);
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+
+/* ---- Grid de cards (usa Bootstrap row/col) ---------------------------- */
+.section-order .container {
+  width: min(100%, var(--max-width-content));
+  padding-inline: var(--space-page-x);
+}
+
+/* ---- Card -------------------------------------------------------------- */
+.kit-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(11, 11, 11, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.kit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(11, 11, 11, 0.15);
+}
+
+/* Tab preta no topo com nome do plano */
+.kit-card__tab {
+  background: var(--color-black-natural);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1rem;
+}
+
+/* Variante Best Seller: tab com gradient + card destacado */
+.kit-card--featured .kit-card__tab {
+  background: linear-gradient(90deg, #ff5e1f 0%, #ffc107 100%);
+  color: var(--color-white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.kit-card--featured {
+  background: linear-gradient(180deg, #fff5d6 0%, #ffe9a8 100%);
+}
+
+@media (min-width: 992px) {
+  .kit-card--featured {
+    transform: scale(1.04);
+  }
+  .kit-card--featured:hover {
+    transform: scale(1.04) translateY(-4px);
+  }
+}
+
+/* Corpo do card */
+.kit-card__body {
+  padding: 1.5rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.kit-card__name {
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-black-natural);
+  margin: 0;
+}
+
+.kit-card__supply {
+  font-size: 0.95rem;
+  color: var(--color-gray-dark);
+  margin: 0.25rem 0 0;
+}
+
+/* Imagem do produto (foto dos bottles) */
+.kit-card__image {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 1rem auto;
+  object-fit: contain;
+}
+
+/* Preco */
+.kit-card__price {
+  font-size: clamp(2.25rem, 1.5rem + 2vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-black-natural);
+  margin: 0.5rem 0 0.25rem;
+}
+
+.kit-card__price-unit {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-gray-dark);
+}
+
+/* Lista de bullets com check verde */
+.kit-card__features {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 240px;
+}
+
+.kit-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-black-natural);
+}
+
+.kit-card__feature i {
+  color: var(--color-green);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+/* Botao BUY NOW */
+.kit-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 280px;
+  min-height: 56px;
+  margin: 0.75rem 0 1rem;
+  padding: 0 1.25rem;
+  background: #ffdd08;
+  box-shadow: inset 0 25px 0 #FFF948;
+  border: 1px solid #ffcd00;
+  color: #00002f;
+  font-size: clamp(1rem, 0.9rem + 1.4vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+  font-family: 'Anton', sans-serif;
+  
+}
+
+.kit-card__cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.kit-card__cta:active,
+.kit-card__cta.is-pressed {
+  transform: translateY(1px);
+  border-bottom-width: 2px;
+}
+
+.kit-card__cta-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #00002f 0%, #003378 100%);
+  color: #fff57d ;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+
+/* Icones de meios de pagamento */
+.kit-card__payments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.kit-card__payment {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background: var(--color-white);
+  color: var(--color-gray-dark);
+  border: 1px solid rgba(11, 11, 11, 0.12);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Total tachado */
+.kit-card__total {
+  font-size: 0.85rem;
+  color: var(--color-gray-light);
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+
+.kit-card__total span {
+  color: var(--color-primary-dark);
+}
